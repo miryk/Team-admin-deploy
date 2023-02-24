@@ -12,7 +12,7 @@ const PlayerSchema = new mongoose.Schema(
     },
     status: {
       type: String,
-      enum: ["Playing", "Not Playing", "Undecided", "null"]
+      enum: ["Playing", "Not Playing", "Undecided"]
     }
   }, {
     timestamps: true

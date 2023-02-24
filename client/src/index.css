@@ -9,3 +9,15 @@
   text-decoration: underline;
   font-weight: bold;
 }
+
+.hover-success:hover {
+  background-color: green;
+}
+
+.hover-danger:hover {
+  background-color: red;
+}
+
+.hover-warning:hover {
+  background-color: goldenrod;
+}

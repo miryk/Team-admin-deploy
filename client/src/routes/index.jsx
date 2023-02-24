@@ -32,9 +32,4 @@ export default createBrowserRouter([
       }
     ]
   },
-  // {
-  //   path: "/status/game/:game",
-  //   errorElement: <h1>Error</h1>,
-  //   element: <StatusPage />
-  // }
 ])
