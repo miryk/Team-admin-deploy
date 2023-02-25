@@ -9,11 +9,11 @@ const PlayerRow = ({ player , setList}) => {
     player.status = status;
     console.log(player);
     try {
-      const response = await axios.put(`${import.meta.env.VITE_REACT_API_URL}/${player._id}`, player);
+      const response = await axios.put(`${import.meta.env.VITE_REACT_API_URL}/api/${player._id}`, player);
       if(response.status == 200) {
         toast.success(`${player.name} updated!`)
       }
-      const refresh = await axios.get(`${import.meta.env.VITE_REACT_API_URL}`);
+      const refresh = await axios.get(`${import.meta.env.VITE_REACT_API_URL}/api`);
       setList(refresh.data);
     } catch (err) {
       toast.error(err)

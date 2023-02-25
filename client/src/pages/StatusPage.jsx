@@ -9,7 +9,7 @@ const StatusPage = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get(`${import.meta.env.VITE_REACT_API_URL}`);
+      const response = await axios.get(`${import.meta.env.VITE_REACT_API_URL}/api`);
       setList(response.data);
     }
     getData()

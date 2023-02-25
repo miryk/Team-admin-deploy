@@ -20,7 +20,7 @@ const PlayerForm = () => {
   const submit = async (values, actions) => {
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_REACT_API_URL}`,
+        `${import.meta.env.VITE_REACT_API_URL}/api`,
         values
       );
       if (response.status == 200) {

@@ -8,7 +8,7 @@ const ListAll = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get(`${import.meta.env.VITE_REACT_API_URL}`);
+      const response = await axios.get(`${import.meta.env.VITE_REACT_API_URL}/api`);
       setList(response.data);
     };
     getData();
@@ -18,12 +18,12 @@ const ListAll = () => {
     try {
       console.log(id);
       const response = await axios.delete(
-        `${import.meta.env.VITE_REACT_API_URL}/${id}`
+        `${import.meta.env.VITE_REACT_API_URL}/api/${id}`
       );
       if (response.status == 200) {
         toast.success(`${name} deleted from team`);
       }
-      const refresh = await axios.get(`${import.meta.env.VITE_REACT_API_URL}`);
+      const refresh = await axios.get(`${import.meta.env.VITE_REACT_API_URL}/api`);
       setList(refresh.data);
     } catch (err) {
       toast.error(err.response.data.message);
