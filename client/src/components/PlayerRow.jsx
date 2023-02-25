@@ -3,20 +3,25 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const PlayerRow = ({ player , setList}) => {
+const PlayerRow = ({ player, setList }) => {
   const updateStatus = async (status) => {
     console.log(player);
     player.status = status;
     console.log(player);
     try {
-      const response = await axios.put(`${import.meta.env.VITE_REACT_API_URL}/api/${player._id}`, player);
-      if(response.status == 200) {
-        toast.success(`${player.name} updated!`)
+      const response = await axios.put(
+        `${import.meta.env.VITE_REACT_API_URL}/api/${player._id}`,
+        player
+      );
+      if (response.status == 200) {
+        toast.success(`${player.name} updated!`);
       }
-      const refresh = await axios.get(`${import.meta.env.VITE_REACT_API_URL}/api`);
+      const refresh = await axios.get(
+        `${import.meta.env.VITE_REACT_API_URL}/api`
+      );
       setList(refresh.data);
     } catch (err) {
-      toast.error(err)
+      toast.error(err);
     }
   };
 
