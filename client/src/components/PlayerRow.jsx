@@ -21,7 +21,7 @@ const PlayerRow = ({ player, setList }) => {
       );
       setList(refresh.data);
     } catch (err) {
-      toast.error(err);
+      toast.error(err?.response.data.message);
     }
   };
 
