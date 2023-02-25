@@ -16,7 +16,6 @@ const ListAll = () => {
 
   const handleDelete = async (id, name) => {
     try {
-      console.log(id);
       const response = await axios.delete(
         `${import.meta.env.VITE_REACT_API_URL}/api/${id}`
       );

@@ -24,12 +24,10 @@ const PlayerForm = () => {
         values
       );
       if (response.status == 200) {
-        console.log("success");
         toast.success(`${response.data.name} created successfully!`);
         navigate("/players/list");
       }
     } catch (err) {
-      console.log(err.response.data.message);
       toast.error(`${err?.response.data.message}`);
     }
   };

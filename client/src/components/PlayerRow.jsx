@@ -5,9 +5,7 @@ import { toast } from "react-toastify";
 
 const PlayerRow = ({ player, setList }) => {
   const updateStatus = async (status) => {
-    console.log(player);
     player.status = status;
-    console.log(player);
     try {
       const response = await axios.put(
         `${import.meta.env.VITE_REACT_API_URL}/api/${player._id}`,
