@@ -4,7 +4,7 @@ const cors = require('cors');
 
 const express = require('express'); // import express
 const app = express(); // instance express
-const port = process.env.PORT;
+const port = process.env.PORT|| 5000 ;
 
 // connect to DB
 require('./config/mongoose.config.js');
