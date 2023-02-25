@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const PlayerRow = ({ player, setList }) => {
+  
   const updateStatus = async (status) => {
     player.status = status;
     try {
